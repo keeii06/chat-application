@@ -15,6 +15,7 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
+const port = process.env.PORT || 6010
 
 const botname = "chatbot";
 
@@ -65,6 +66,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log("server running");
 });
