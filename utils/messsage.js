@@ -1,6 +1,6 @@
 const moment = require("moment");
 
-let local = moment().local();
+let local = moment();
 
 function formatmsg(username, message) {
   return {
