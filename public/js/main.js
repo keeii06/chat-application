@@ -9,7 +9,7 @@ const { username, room } = Qs.parse(location.search, {
 const outputmsg = (msgg) => {
   const div = document.createElement("div");
   div.classList.add("message");
-  div.innerHTML = `<p class="meta">${msgg.username} <span>${msgg.time}</span></p> <p class="text">${msgg.message}</p>`;
+  div.innerHTML = `<p class="meta">${msgg.username} <span>${msgg.time} (UTC)</span></p> <p class="text">${msgg.message}</p>`;
   document.querySelector(".chat-messages").appendChild(div);
 };
 
