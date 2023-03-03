@@ -3,7 +3,7 @@ const path = require("path");
 
 const express = require("express");
 const socketio = require("socket.io");
-
+const port = process.env.PORT || 6010
 const formatmsg = require("./utils/messsage");
 const {
   userjoin,
@@ -15,7 +15,7 @@ const {
 const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
-const port = process.env.PORT || 6010
+
 
 const botname = "chatbot";
 
